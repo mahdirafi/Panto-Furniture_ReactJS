@@ -1,0 +1,12 @@
+@import "tailwindcss";
+ 
+@theme {
+  --color-primary: #E58411;
+  --color-secondary: #1E1E1E;
+  --color-secondary-bg: #F7F7F7;
+  --font-primary: "Poppins", sans-serif;
+};
+
+.section-container {
+  @apply max-w-screen-2xl container mx-auto py-6 px-4;
+}
