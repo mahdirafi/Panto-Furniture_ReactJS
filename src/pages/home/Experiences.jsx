@@ -10,7 +10,7 @@ const Experiences = () => {
       </div>
       <div className="md:w-1/2 sm:w-full mx-auto">
         <h3 className="text-lg font-semibold text-primary mb-4">Experiences</h3>
-        <h2 className="text-4xl font-bold mb-4 capitalize lg:w-1/2">
+        <h2 className="text-4xl font-bold mb-4 capitalize lg:w-3/5 flex items-center justify-center  ">
           we provide you the best experience
         </h2>
         <p className="text-secondary dark:text-white mb-5 lg:w-2/3">
