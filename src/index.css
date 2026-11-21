@@ -7,8 +7,39 @@
   --color-secondary: #171717;
   --color-secondary-bg: #F7F7F7;
   --font-primary: "Poppins", sans-serif;
+  --word-spacing-tight: -0.05em;
+  --word-spacing-normal: 0em;
+  --word-spacing-wide: 0.1em;
+  --word-spacing-wider: 0.2em;
 };
 
 .section-container {
   @apply max-w-screen-2xl container mx-auto py-6 px-4;
+};
+
+ /* .dark {
+  @apply bg-gray-900 text-white;
+} */
+/* .swiper-button-prev:after,
+.swiper-button-next:after {
+  @apply px-4! py-2! ring-1! ring-primary! rounded-full! bg-white! text-black! text-lg!;
+} */
+
+/* Swiper navigation buttons (index.css / global css) */
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply w-6 h-6 rounded-full bg-white text-black ring-1 ring-primary transition-colors;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  @apply bg-primary text-white;
+}
+
+/* Arrow icon size */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 16px;
+  font-weight: 700;
 }
