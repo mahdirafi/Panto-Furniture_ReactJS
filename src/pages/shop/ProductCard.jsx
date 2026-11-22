@@ -1,10 +1,16 @@
 import { FaPlus } from "react-icons/fa";
 import Rating from "../../Components/Rating";
 import { getImageUrl } from "../../utils/getImageUrl";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 
  
 
 const ProductCard = ({product}) => {
+    // cart count
+  const {AddToCart} = useContext(CartContext);
+
+
     return (
         <div className=" ">
             <div className="bg-[#FAFAFA] shadow-xl">
@@ -17,7 +23,13 @@ const ProductCard = ({product}) => {
                 <Rating rating={product.rating} />
                 <div className="mt-5 flex items-center justify-between mx-4">
                     <p className="text-xl font-semibold"> <sup>$</sup> <span>{product.price}</span></p>
-                    <button className="bg-blue-950 text-white px-2  py-2 rounded-full cursor-pointer text-xl"><FaPlus /></button>
+
+                    <button 
+                    onClick={()=> {
+                        AddToCart(product) 
+                    }}
+
+                    className="bg-blue-950 text-white px-2  py-2 rounded-full cursor-pointer text-xl"><FaPlus /></button>
                 </div>
         </div>
         </div>

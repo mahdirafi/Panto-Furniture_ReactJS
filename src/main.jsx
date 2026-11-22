@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
 import App from "./App.jsx";
 import "./index.css";
+
+import 'sweetalert2/dist/sweetalert2.min.css'
+
 import Home from "./pages/home/Home.jsx";
 import Shop from "./pages/shop/Shop.jsx";
 import About from "./pages/about/About.jsx"

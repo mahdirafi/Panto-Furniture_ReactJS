@@ -5,6 +5,8 @@ import btnIcon from "../../assets/button-icon.png"
 import { ThemeContext } from "../../Context/ThemeContext";
 
 const Products = ({ headline }) => {
+  
+
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const categories = ["Chair", "Beds", "Sofa", "Lamp"];
 

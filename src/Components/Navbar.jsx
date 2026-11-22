@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaBars, FaShoppingBag, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router";
+import { CartContext } from "../Context/CartContext";
 
 const navItems = [
   { path: "/", label: "Furniture" },
@@ -10,12 +11,14 @@ const navItems = [
 ];
 
 const NavItems = ({ toggle }) => {
+  
+ 
   return (
     <ul className="flex flex-col md:flex-row items-center md:space-x-8 gap-8">
       {navItems.map((item, index) => (
         <li key={index} >
           <NavLink
-          toggle={toggle}
+          onClick={toggle}
             to={item.path}
             className={({ isActive }) =>
               isActive ? "text-primary font-bold" : "hover:text-primary"
@@ -46,7 +49,12 @@ const Navbar = () => {
     }
     window.addEventListener('scroll' , handleScroll);
     return(window.addEventListener('scroll',handleScroll));
-  } , [])
+  } , []);
+  // cartContext
+  const {AddToCart , cartCount}  = useContext(CartContext);
+  console.log(AddToCart , cartCount);
+
+  
 
   return (
     <header className={`fixed top-0 right-0 left-0 z-50 transition duration-300 ease-in-out  
@@ -87,7 +95,7 @@ const Navbar = () => {
             className="absolute top-2 left-4 bg-primary text-white w-5 h-5 flex 
           items-center justify-center rounded-full text-sm"
           >
-            0
+            {cartCount}
           </sup>
         </div>
       </nav>
