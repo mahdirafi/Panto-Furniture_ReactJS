@@ -20,7 +20,7 @@ const socialLinks = [
 ];
 
 const linkClass =
-  "text-gray-600 transition-colors duration-200 hover:text-primary";
+  "text-gray-600 dark:text-gray-200 transition-colors duration-200 hover:text-primary";
 
 const FooterColumn = ({ title, children }) => (
   <div>
@@ -31,18 +31,18 @@ const FooterColumn = ({ title, children }) => (
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 bg-gray-100">
+    <footer className="border-t border-gray-200 bg-gray-100 dark:bg-gray-900">
       <div className="section-container px-4 py-12 sm:px-6 lg:py-16">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
           {/* Logo and description */}
           <div className="sm:col-span-2">
             <Link
               to="/"
-              className="inline-block text-2xl font-bold tracking-tight text-gray-900"
+              className="inline-block text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100"
             >
               Panto
             </Link>
-            <p className="mt-4 max-w-md leading-relaxed text-gray-600">
+            <p className="mt-4 max-w-md leading-relaxed text-gray-600 dark:text-gray-300">
               The advantage of hiring a workspace with us is that it gives you
               comfortable service and all-around facilities.
             </p>
@@ -56,7 +56,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-700 shadow-sm ring-1 ring-gray-200 transition hover:bg-gray-900 hover:text-white"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white dark:text-gray-800 text-gray-700 shadow-sm ring-1 ring-gray-200 transition hover:bg-gray-900 hover:text-white"
                   >
                     <Icon className="text-base" />
                   </a>
@@ -112,13 +112,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-gray-200 pt-6 text-sm text-gray-500 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t dark:text-gray-200 border-gray-200 pt-6 text-sm text-gray-500 sm:flex-row">
           <p>© {new Date().getFullYear()} Panto. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link to="/" className="hover:text-gray-900">
+            <Link to="/" className="hover:text-gray-900 dark:hover:text-primary">
               Privacy Policy
             </Link>
-            <Link to="/" className="hover:text-gray-900">
+            <Link to="/" className="hover:text-gray-900 dark:hover:text-primary">
               Terms of Service
             </Link>
           </div>

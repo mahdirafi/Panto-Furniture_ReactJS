@@ -1,14 +1,18 @@
-// import React, { useContext } from 'react';
+ 
 import bannerImg from '../../assets/banner.png';
 import { FaSearch } from 'react-icons/fa';
 import TooltipButton from '../../Components/TooltipButton';
 import BasicToolTip from '../../Components/BasicToolTip';
-// import { ThemeContext } from '../../context/ThemeContext';
+import { BsMoon, BsSun } from 'react-icons/bs';
+import { useContext } from 'react';
+import { ThemeContext } from '../../Context/ThemeContext';
+ 
 // import { BsMoon, BsSun } from 'react-icons/bs';
  
 
 const Hero = () => {
-    // const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+    const {isDarkMood , toggleTheme } = useContext(ThemeContext);
+    console.log(isDarkMood , toggleTheme);
     return (
         <section className={`relative h-screen bg-cover bg-center text-white  `} style={{ backgroundImage: `url(${bannerImg})` }}>
 
@@ -45,14 +49,16 @@ const Hero = () => {
             </div>
 
             {/* dark and light mode */}
-            {/* <div className="absolute bottom-16 right-16 z-40">
+            <div className="absolute bottom-20 right-16 z-40">
                 <button
                     onClick={toggleTheme}
-                    className="focus:outline-none font-bold text-lg bg-black text-white p-5 rounded-full "
+                    className="focus:outline-none font-bold text-lg bg-black text-white p-5 rounded-full cursor-pointer"
                 >
-                    {isDarkMode ? <BsSun className="text-yellow-300" /> : <BsMoon />}
+                    {isDarkMood ? <BsSun className="text-yellow-300" /> : <BsMoon />}
+
+                    {/* <BsSun/> */}
                 </button>
-            </div>  */}
+            </div> 
         </section>
     );
 }

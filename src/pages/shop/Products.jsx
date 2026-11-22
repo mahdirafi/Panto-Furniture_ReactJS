@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { products } from "../../utils/Products";
 import ProductCard from "./ProductCard";
 import btnIcon from "../../assets/button-icon.png"
+import { ThemeContext } from "../../Context/ThemeContext";
 
 const Products = ({ headline }) => {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const categories = ["Chair", "Beds", "Sofa", "Lamp"];
 
   const [selectCategory, setSelectCategory] = useState("Chair");
@@ -20,12 +22,14 @@ const Products = ({ headline }) => {
   };
 
   return (
-    <div className="text-secondary  bg-gray-100">
+   <div className={`${isDarkMode ? 'bg-gray-900 text-white' : 'bg-secondary-bg'}`}>
+  
+    <div className="text-secondary  bg-gray-100 dark:bg-gray-950 dark:text-white">
       <div className="section-container">
         <h2 className="text-4xl font-bold text-center my-12">{headline}</h2>
 
         {/*category tabs  */}
-        <div className="bg-green-100 max-w-md mx-auto sm:rounded-full md:p-2.5 py-5 mb-16">
+        <div className="bg-green-100 dark:bg-gray-500  max-w-md mx-auto sm:rounded-full md:p-2.5 py-5 mb-16">
           <div className="flex flex-col sm:flex-row items-center md:justify-between justify-center gap-4">
             {categories.map((category, index) => (
               <button
@@ -38,8 +42,8 @@ const Products = ({ headline }) => {
                   hover:rounded-full cursor-pointer transition-colors 
                       ${
                         selectCategory === category
-                          ? "text-primary rounded-full bg-green-100 font-semibold"
-                          : "bg-secondary-bg rounded-full"
+                          ? "text-primary rounded-full bg-green-100 dark:bg-gray-300 font-semibold"
+                          : "bg-secondary-bg dark:bg-gray-400 dark:text-gray-950 rounded-full"
                       }`}
               >
                 {category}
@@ -69,6 +73,8 @@ const Products = ({ headline }) => {
         }
       </div>
     </div>
+ </div>
+   
   );
 };
 

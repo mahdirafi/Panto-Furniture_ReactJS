@@ -49,7 +49,8 @@ const Navbar = () => {
   } , [])
 
   return (
-    <header className={`fixed top-0 right-0 left-0 z-50 transition duration-300 ease-in-out  ${isScroll ? "bg-white shadow-md" : "text-white bg-transparent"}`}>
+    <header className={`fixed top-0 right-0 left-0 z-50 transition duration-300 ease-in-out  
+    ${isScroll ? "bg-white shadow-md dark:text-gray-950 " : "text-white bg-transparent"}`}>
       <nav className="max-w-screen-2xl container mx-auto flex items-center justify-between px-2 py-6 ">
         {/* logo */}
         <NavLink to="/" className="font-bold text-2xl">

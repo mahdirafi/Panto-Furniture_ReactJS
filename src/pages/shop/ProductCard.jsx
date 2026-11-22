@@ -6,12 +6,12 @@ import { getImageUrl } from "../../utils/getImageUrl";
 
 const ProductCard = ({product}) => {
     return (
-        <div >
+        <div className=" ">
             <div className="bg-[#FAFAFA] shadow-xl">
                 <img src={getImageUrl(`${product.imageUrl}`)} alt="" />
             </div>
 
-            <div className={`p-6   bg-white shadow-sm space-y-4`}>
+            <div className={`p-6 dark:bg-gray-900 dark:text-white  bg-white shadow-sm space-y-4`}>
                 <h4 className='text-base  mb-1'>{product.category}</h4>
                 <h3 className="font-semibold text-xl mb-2">{product.name}</h3>
                 <Rating rating={product.rating} />

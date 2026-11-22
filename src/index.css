@@ -12,7 +12,9 @@
   --word-spacing-wide: 0.1em;
   --word-spacing-wider: 0.2em;
 };
-
+.dark{
+  @apply bg-gray-900 text-white;
+}
 .section-container {
   @apply max-w-screen-2xl container mx-auto py-6 px-4;
 };
