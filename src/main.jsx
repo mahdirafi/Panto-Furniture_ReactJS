@@ -6,7 +6,8 @@ import "./index.css";
 import Home from "./pages/home/Home.jsx";
 import Shop from "./pages/shop/Shop.jsx";
 import About from "./pages/about/About.jsx"
-import Contact from "./pages/contact/contact.jsx";
+import Contact from "./pages/contact/Contact.jsx";
+ 
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
