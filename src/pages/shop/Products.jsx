@@ -31,7 +31,7 @@ const Products = ({ headline }) => {
         <h2 className="text-4xl font-bold text-center my-12">{headline}</h2>
 
         {/*category tabs  */}
-     <div className="w-full max-w-md sm:max-w-fit mx-auto mb-16 py-3 px-3 rounded-full bg-gray-500 sm:bg-green-100 sm:dark:bg-gray-500 sm:rounded-full md:p-2.5">
+     <div className="w-full max-w-md sm:max-w-fit mx-auto mb-16 py-3 px-3 rounded-full bg-gray-200 sm:bg-green-100 sm:dark:bg-gray-500 sm:rounded-full md:p-2.5">
   <div className="flex flex-row items-center gap-4 sm:gap-4 overflow-x-auto sm:overflow-visible sm:justify-center md:justify-between [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
     {categories.map((category, index) => (
       <button
